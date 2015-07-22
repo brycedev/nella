@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+	    <dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>footerCellClass</key><string>NellaHeaderCell</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>label</key><string>Basic Configuration</string>
+            <key>footerText</key><string>Disable or enable Nella's features.</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSSwitchCell</string>
+			<key>default</key><true/>
+			<key>defaults</key><string>com.brycedev.nella</string>
+			<key>key</key><string>kEnabled</string>
+			<key>label</key><string>Enabled</string>
+			<key>PostNotification</key><string>com.brycedev.nella/prefschanged</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>label</key><string>Options</string>
+            <key>footerText</key><string></string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSLinkCell</string>
+			<key>detail</key><string>NellaBackgroundController</string>
+			<key>label</key><string>Background Options</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSLinkCell</string>
+			<key>detail</key><string>NellaButtonController</string>
+			<key>label</key><string>Button Options</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSLinkCell</string>
+			<key>detail</key><string>NellaMiscController</string>
+			<key>label</key><string>Misc. Options</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>label</key>
+			<string>Support</string><key>footerText</key><string></string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>Twitter (@thebryc3isright)</string>
+			<key>action</key><string>openSupportTwitter</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>Mail (bryce@brycedev.com)</string>
+			<key>action</key><string>openSupportMail</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>label</key>
+			<string>Donate</string><key>footerText</key><string>My Bitcoin address will automatically be copied to your pasteboard</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>Bitcoin</string>
+			<key>action</key><string>openDonateBitcoin</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSGroupCell</string>
+			<key>footerAlignment</key><integer>1</integer>
+			<key>footerText</key><string>© 2015 Bryce Jackson (@thebryc3isright)</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Nella</string>
+</dict>
+</plist>

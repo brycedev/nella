@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = Nella;
+	cell = PSLinkCell;
+	detail = NellaListController;
+	icon = icon.png;
+	isController = 1;
+	label = Nella;
+    };
+}
