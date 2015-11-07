@@ -1,9 +1,8 @@
-include theos/makefiles/common.mk
+include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = Nella
-Nella_FILES = Nella.mm
+Nella_FILES = NellaButtonController.m NellaHeaderCell.m NellaMiscController.m NellaRootController.m
 Nella_INSTALL_PATH = /Library/PreferenceBundles
-Nella_LIBRARIES = colorpicker
 Nella_FRAMEWORKS = UIKit MessageUI
 Nella_PRIVATE_FRAMEWORKS = Preferences
 

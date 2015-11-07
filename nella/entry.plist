@@ -2,7 +2,7 @@
     entry = {
 	bundle = Nella;
 	cell = PSLinkCell;
-	detail = NellaListController;
+	detail = NellaRootController;
 	icon = icon.png;
 	isController = 1;
 	label = Nella;
