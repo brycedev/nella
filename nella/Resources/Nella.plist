@@ -54,12 +54,17 @@
 		<dict>
 			<key>cell</key><string>PSGroupCell</string>
 			<key>label</key>
-			<string>Donate</string><key>footerText</key><string>My Bitcoin address will automatically be copied to your pasteboard</string>
+			<string>Donate</string><key>footerText</key><string>My Bitcoin/PayPal address will automatically be copied to your pasteboard</string>
 		</dict>
 		<dict>
 			<key>cell</key><string>PSButtonCell</string>
 			<key>label</key><string>Bitcoin</string>
 			<key>action</key><string>openDonateBitcoin</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSButtonCell</string>
+			<key>label</key><string>PayPal</string>
+			<key>action</key><string>openDonatePayPal</string>
 		</dict>
 		<dict>
 			<key>cell</key><string>PSGroupCell</string>

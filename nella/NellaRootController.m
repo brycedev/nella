@@ -60,6 +60,16 @@ UIWindow *settingsView;
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"bitcoin:"]];
 }
 
+- (void)openDonatePayPal {
+    UIPasteboard *appPasteBoard = [UIPasteboard generalPasteboard];
+    appPasteBoard.persistent = YES;
+    [appPasteBoard setString: @"bryce@brycedev.com"];
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"paypal:"]])
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"paypal:"]];
+    else
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://paypal.com"]];
+}
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
     [self dismissViewControllerAnimated: YES completion: nil];
 }

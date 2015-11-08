@@ -1,9 +1,9 @@
 Package: com.brycedev.nella
 Name: Nella
 Depends: mobilesubstrate, firmware (>= 7.0), cydia (>= 1.1.19)
-Version: 1.1.2
+Version: 2.0
 Architecture: iphoneos-arm
-Description: Nella allows you to customize the Cydia interface. It has been initially created as a proof of concept for modifying the Cydia progress view. There are currently only a few options to configure in settings.
+Description: Nella adds additional features for configuring the Cydia installation screen.
 Maintainer: Bryce Jackson
 Author: Bryce Jackson
 Section: Tweaks
