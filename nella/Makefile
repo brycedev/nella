@@ -5,6 +5,7 @@ Nella_FILES = NellaButtonController.m NellaHeaderCell.m NellaMiscController.m Ne
 Nella_INSTALL_PATH = /Library/PreferenceBundles
 Nella_FRAMEWORKS = UIKit MessageUI
 Nella_PRIVATE_FRAMEWORKS = Preferences
+Nella_LIBRARIES = colorpicker
 
 include $(THEOS_MAKE_PATH)/bundle.mk
 

@@ -1,17 +1,9 @@
 #import "BDSettingsManager.h"
 
-@interface NSObject (SpringBoard)
-- (instancetype)sharedInstance;
-@end
-
 @interface ProgressController : UIViewController
 - (void)webView:(UIWebView *)webView didFinishLoadForFrame:(id)frame;
-- (NSString *)colorToWeb:(UIColor *)arg1;
 - (void)webView:(UIWebView *)webView didReceiveTitle:(NSString *)title forFrame:(id)frame;
-- (void)didStartLoading;
 @end
-
-UIWebView *wv;
 
 %hook ProgressController
 
@@ -40,6 +32,14 @@ UIWebView *wv;
             NSString *noBorderJs = @"var button = document.querySelector('#button');button.style.borderColor = 'transparent';";
             [webView stringByEvaluatingJavaScriptFromString:noBorderJs];
         }
+        if(![[BDSettingsManager sharedManager] noBorder]){
+            NSString *borderColorJS = [NSString stringWithFormat:@"var button = document.querySelector('#button');button.style.borderColor = '%@';", [[BDSettingsManager sharedManager] borderColor]];
+            [webView stringByEvaluatingJavaScriptFromString:borderColorJS];
+            NSString *textColorJS = [NSString stringWithFormat:@"var button = document.querySelector('#button');button.style.color = '%@';", [[BDSettingsManager sharedManager] textColor]];
+            [webView stringByEvaluatingJavaScriptFromString:textColorJS];
+        }
+        NSString *backgroundColorJS = [NSString stringWithFormat: @"var body=document.querySelector('body');body.style.backgroundColor= '%@'", [[BDSettingsManager sharedManager] backgroundColor]] ;
+        [webView stringByEvaluatingJavaScriptFromString:backgroundColorJS];
     }
 }
 

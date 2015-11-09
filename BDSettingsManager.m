@@ -19,7 +19,7 @@ void prefschanged(CFNotificationCenterRef center, void * observer, CFStringRef n
     if (self = [super init]) {
         CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), NULL, prefschanged, CFSTR("com.brycedev.nella.prefschanged"), NULL, CFNotificationSuspensionBehaviorCoalesce);
         [self updateSettings];
-        HBLogInfo(@"the settings for Nella are : %@", [self settings]);
+
     }
     return self;
 }
@@ -31,6 +31,7 @@ void prefschanged(CFNotificationCenterRef center, void * observer, CFStringRef n
     CFArrayRef keyList = CFPreferencesCopyKeyList(appID , kCFPreferencesCurrentUser, kCFPreferencesAnyHost) ?: CFArrayCreate(NULL, NULL, 0, NULL);
     self.settings = (NSDictionary *)CFPreferencesCopyMultiple(keyList, appID , kCFPreferencesCurrentUser, kCFPreferencesAnyHost);
     CFRelease(keyList);
+    HBLogInfo(@"the settings are : %@", self.settings);
 }
 
 - (BOOL)enabled {
@@ -47,6 +48,18 @@ void prefschanged(CFNotificationCenterRef center, void * observer, CFStringRef n
 
 - (NSInteger)borderRadius {
     return self.settings[@"borderRadius"] ? [self.settings[@"borderRadius"] integerValue] : 10;
+}
+
+- (NSString*)borderColor {
+    return self.settings[@"borderColor"] ? self.settings[@"borderColor"] : @"#ffffff";
+}
+
+- (NSString*)textColor {
+    return self.settings[@"textColor"] ? self.settings[@"textColor"] : @"#ffffff";
+}
+
+- (NSString*)backgroundColor {
+    return self.settings[@"backgroundColor"] ? self.settings[@"backgroundColor"] : @"#ffffff";
 }
 
 @end
