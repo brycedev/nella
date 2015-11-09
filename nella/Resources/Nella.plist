@@ -28,6 +28,11 @@
 		</dict>
 		<dict>
 			<key>cell</key><string>PSLinkCell</string>
+			<key>detail</key><string>NellaBackgroundController</string>
+			<key>label</key><string>Background Options</string>
+		</dict>
+		<dict>
+			<key>cell</key><string>PSLinkCell</string>
 			<key>detail</key><string>NellaButtonController</string>
 			<key>label</key><string>Button Options</string>
 		</dict>
