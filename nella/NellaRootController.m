@@ -20,12 +20,14 @@ UIWindow *settingsView;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 	settingsView = [[UIApplication sharedApplication] keyWindow];
 	originalTint = settingsView.tintColor;
 	settingsView.tintColor = NELLA_BLUE;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
 	settingsView.tintColor = originalTint;
 }
 

@@ -1,7 +1,7 @@
 Package: com.brycedev.nella
 Name: Nella
 Depends: mobilesubstrate, firmware (>= 7.0), cydia (>= 1.1.19), org.thebigboss.libcolorpicker (>= 1.4)
-Version: 2.0
+Version: 2.1
 Architecture: iphoneos-arm
 Description: Nella adds additional features for configuring the Cydia installation screen.
 Maintainer: Bryce Jackson

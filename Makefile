@@ -1,8 +1,9 @@
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = Nella
-Nella_FILES = BDSettingsManager.m Tweak.xm
+Nella_FILES = NellaSettingsManager.m Tweak.xm
 Nella_FRAMEWORKS = Foundation UIKit
+Nella_LIBRARIES = colorpicker
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

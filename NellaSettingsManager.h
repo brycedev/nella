@@ -1,4 +1,4 @@
-@interface BDSettingsManager : NSObject
+@interface NellaSettingsManager : NSObject
 
 @property (nonatomic, copy) NSDictionary *settings;
 @property (nonatomic, readonly) BOOL enabled;
